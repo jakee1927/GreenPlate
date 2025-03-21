@@ -72,6 +72,7 @@ export default function MenuPage() {
               className="object-cover brightness-[0.6]"
               priority
             />
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
           </div>
           <div className="container relative z-10 py-16 md:py-24">
             <div className="max-w-2xl space-y-4 text-white">
@@ -150,7 +151,7 @@ export default function MenuPage() {
                 agriculture.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   name: "Sunrise Organic Farm",
@@ -171,25 +172,22 @@ export default function MenuPage() {
                   image: "/farmShroom.jpg",
                 },
               ].map((farm, index) => (
-                <div
-                  key={index}
-                  className="group relative overflow-hidden rounded-lg border bg-background shadow transition-all hover:shadow-lg"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={farm.image || "/placeholder.svg"}
-                      alt={farm.name}
-                      width={400}
-                      height={300}
-                      className="object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold">{farm.name}</h3>
-                    <p className="text-sm text-muted-foreground mb-2">{farm.distance}</p>
-                    <p className="text-muted-foreground">{farm.specialty}</p>
-                  </div>
-                </div>
+                <div className="group relative overflow-hidden rounded-lg border bg-background shadow transition-all hover:shadow-lg">
+  <div className="aspect-[16/9] relative overflow-hidden">
+    <Image
+      src={farm.image || "/placeholder.svg"}
+      alt={farm.name}
+      fill
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      className="object-cover transition-transform group-hover:scale-105"
+    />
+  </div>
+  <div className="p-6">
+    <h3 className="text-xl font-semibold">{farm.name}</h3>
+    <p className="text-sm text-muted-foreground mb-2">{farm.distance}</p>
+    <p className="text-muted-foreground">{farm.specialty}</p>
+  </div>
+</div>
               ))}
             </div>
           </div>
@@ -409,7 +407,7 @@ export default function MenuPage() {
             </div>
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p>© {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -621,4 +619,3 @@ function MenuSection({ filterCategory = null }: { filterCategory?: string | null
     </div>
   )
 }
-

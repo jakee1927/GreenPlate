@@ -60,14 +60,15 @@ export default function ApproachPage() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative">
+        <section className="relative h-[50vh] min-h-[400px]">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=500&width=1920"
-              alt="Chef preparing fresh vegetables in a sunlit kitchen"
+              src="/chefchopping.jpg"
+              alt="Chef chopping fresh vegetables in a sunlit kitchen"
               fill
               className="object-cover brightness-[0.6]"
               priority
+              sizes="100vw"
             />
           </div>
           <div className="container relative z-10 py-16 md:py-24">
@@ -127,12 +128,14 @@ export default function ApproachPage() {
                   ))}
                 </div>
               </div>
-              <div className="relative aspect-square lg:aspect-auto">
+              <div className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=800"
-                  alt="Chef examining fresh produce"
-                  fill
-                  className="object-cover rounded-lg"
+                  src="/harvest-bowl.jpg"
+                  alt="Fresh harvest bowl with seasonal vegetables"
+                  width={800}
+                  height={800}
+                  priority
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
             </div>
@@ -434,12 +437,12 @@ export default function ApproachPage() {
                   key={index}
                   className="group relative overflow-hidden rounded-lg border bg-background shadow transition-all hover:shadow-lg"
                 >
-                  <div className="aspect-square overflow-hidden">
+                  <div className="aspect-square relative overflow-hidden">
                     <Image
                       src={person.image || "/placeholder.svg"}
                       alt={person.name}
-                      width={400}
-                      height={400}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                       className="object-cover transition-transform group-hover:scale-105"
                     />
                   </div>
@@ -620,11 +623,10 @@ export default function ApproachPage() {
             </div>
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p>© {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
+            <p> {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
   )
 }
-
