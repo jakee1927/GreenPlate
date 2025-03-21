@@ -14,7 +14,7 @@ export default function Home() {
             <span className="text-xl font-bold">GreenPlate</span>
           </Link>
           <nav className="hidden md:flex gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/" className="text-sm font-medium text-primary transition-colors">
               About Us
             </Link>
             <Link href="/menu" className="text-sm font-medium hover:text-primary transition-colors">

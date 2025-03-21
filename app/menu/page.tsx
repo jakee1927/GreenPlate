@@ -20,7 +20,7 @@ export default function MenuPage() {
           <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
               About Us
             </Link>
-            <Link href="/menu" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/menu" className="text-sm font-medium text-primary transition-colors">
               Menu
             </Link>
             <Link href="/approach" className="text-sm font-medium hover:text-primary transition-colors">

@@ -22,7 +22,7 @@ export default function ApproachPage() {
             <Link href="/menu" className="text-sm font-medium hover:text-primary transition-colors">
               Menu
             </Link>
-            <Link href="/approach" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/approach" className="text-sm font-medium text-primary transition-colors">
               Our Approach
             </Link>
             <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
