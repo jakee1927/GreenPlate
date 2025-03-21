@@ -518,10 +518,10 @@ export default function ApproachPage() {
 
         {/* CTA Section */}
         <section className="relative py-16 md:py-24">
-          <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=600&width=1920"
-              alt="Chef's table with beautifully plated dishes"
+              src="promo-dusk.jpg"
+              alt="Restaurant interior"
               fill
               className="object-cover brightness-[0.4]"
             />

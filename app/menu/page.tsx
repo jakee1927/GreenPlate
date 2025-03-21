@@ -63,14 +63,16 @@ export default function MenuPage() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative">
+        <section className="relative h-[50vh] min-h-[400px]">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/hero-image.jpg"
+              src="/menuherodish.jpg"
               alt="Beautifully plated vegetarian dish"
               fill
               className="object-cover brightness-[0.6]"
+              style={{ objectPosition: 'center 70%' }}
               priority
+              sizes="100vw"
             />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
           </div>

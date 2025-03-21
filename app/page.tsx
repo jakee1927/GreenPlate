@@ -209,7 +209,7 @@ export default function Home() {
               </div>
               <div className="relative aspect-square lg:aspect-[16/9]">
                 <Image
-                  src="/hero-image.jpg"
+                  src="/farmerharvesting.jpg"
                   alt="Farmer harvesting fresh vegetables"
                   fill
                   className="object-cover rounded-lg"
