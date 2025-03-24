@@ -130,7 +130,7 @@ export default function ApproachPage() {
               </div>
               <div className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/harvest-bowl.jpg"
+                  src="/harvestbowl2.jpg"
                   alt="Fresh harvest bowl with seasonal vegetables"
                   width={800}
                   height={800}
@@ -211,7 +211,7 @@ export default function ApproachPage() {
                   </div>
                   <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px]">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/happyfarmer.jpg"
                       alt="Chef selecting produce at a local farm"
                       fill
                       className="object-cover rounded-lg"
@@ -268,7 +268,7 @@ export default function ApproachPage() {
                   </div>
                   <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px]">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/chefprep.jpg"
                       alt="Chef carefully preparing vegetables in the kitchen"
                       fill
                       className="object-cover rounded-lg"
@@ -326,7 +326,7 @@ export default function ApproachPage() {
                   </div>
                   <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px]">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/seasonalharvest.jpg"
                       alt="Seasonal harvest of vegetables arranged beautifully"
                       fill
                       className="object-cover rounded-lg"
@@ -418,32 +418,33 @@ export default function ApproachPage() {
                   name: "Elena Rodriguez",
                   title: "Executive Chef",
                   bio: "With 15 years of experience in plant-based cuisine, Elena brings classical training and innovative techniques to create GreenPlate's signature dishes.",
-                  image: "/placeholder.svg?height=400&width=400",
+                  image: "/chefelena.jpg",
                 },
                 {
                   name: "Marcus Chen",
                   title: "Culinary Director",
                   bio: "Marcus oversees our culinary program, working directly with farmers to plan seasonal menus and ensure our high standards are maintained.",
-                  image: "/placeholder.svg?height=400&width=400",
+                  image: "/chefchen.jpg",
                 },
                 {
                   name: "Sophia Williams",
                   title: "Pastry Chef",
                   bio: "Sophia specializes in plant-based pastry, creating desserts that are both indulgent and aligned with our whole-food philosophy.",
-                  image: "/placeholder.svg?height=400&width=400",
+                  image: "/chefsophia.jpg",
                 },
               ].map((person, index) => (
                 <div
                   key={index}
                   className="group relative overflow-hidden rounded-lg border bg-background shadow transition-all hover:shadow-lg"
                 >
-                  <div className="aspect-square relative overflow-hidden">
+                  <div className="aspect-square relative">
                     <Image
                       src={person.image || "/placeholder.svg"}
                       alt={person.name}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                      className="object-cover transition-transform group-hover:scale-105"
+                      className="object-cover object-top transition-transform group-hover:scale-105"
+                      style={{ objectPosition: '0 15%' }}
                     />
                   </div>
                   <div className="p-6">
