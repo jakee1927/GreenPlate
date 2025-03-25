@@ -26,7 +26,7 @@ export default function MenuPage() {
             <Link href="/approach" className="text-sm font-medium hover:text-primary transition-colors">
               Our Approach
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/sustainability" className="text-sm font-medium hover:text-primary transition-colors">
               Sustainability
             </Link>
             <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
@@ -362,7 +362,7 @@ export default function MenuPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/sustainability" className="text-muted-foreground hover:text-primary transition-colors">
                     Sustainability
                   </Link>
                 </li>
