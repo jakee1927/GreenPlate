@@ -489,9 +489,9 @@ export default function ApproachPage() {
                   position: "Annual Restaurant Guide",
                 },
               ].map((testimonial, index) => (
-                <div key={index} className="p-8 bg-muted rounded-lg relative">
+                <div key={index} className="p-8 bg-muted rounded-lg">
                   <svg
-                    className="h-12 w-12 text-primary/20 absolute top-6 left-6"
+                    className="h-8 w-8 text-primary/40 mb-4"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -504,12 +504,10 @@ export default function ApproachPage() {
                     <path d="M12.0003 10.2L18.0003 4.2L16.8003 3L10.8003 9L12.0003 10.2Z" />
                     <path d="M12.0003 21L18.0003 15L16.8003 13.8L10.8003 19.8L12.0003 21Z" />
                   </svg>
-                  <div className="relative z-10">
-                    <p className="text-lg italic mb-6">{testimonial.quote}</p>
-                    <div>
-                      <p className="font-medium">— {testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                    </div>
+                  <p className="text-lg italic mb-6">{testimonial.quote}</p>
+                  <div>
+                    <p className="font-medium">— {testimonial.author}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.position}</p>
                   </div>
                 </div>
               ))}
