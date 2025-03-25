@@ -31,6 +31,9 @@ export default function SustainabilityPage() {
             <span className="text-xl font-bold">GreenPlate</span>
           </Link>
           <nav className="hidden md:flex gap-6">
+          <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+              About Us
+            </Link>
             <Link href="/menu" className="text-sm font-medium hover:text-primary transition-colors">
               Menu
             </Link>
@@ -39,9 +42,6 @@ export default function SustainabilityPage() {
             </Link>
             <Link href="/sustainability" className="text-sm font-medium text-primary transition-colors">
               Sustainability
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
-              About Us
             </Link>
             <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
               Contact
