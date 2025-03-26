@@ -78,7 +78,7 @@ export default function SustainabilityPage() {
         <section className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=500&width=1920"
+              src="/sustainablechefs.jpg"
               alt="Sustainable restaurant practices"
               fill
               className="object-cover brightness-[0.6]"
@@ -114,7 +114,7 @@ export default function SustainabilityPage() {
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
                   Our Vision for a Sustainable Future
                 </h2>
-                <p className="text-muted-foreground mb-6 text-lg">
+                <p className="text-muted-foreground mb-6">
                   We believe that restaurants have a unique opportunity—and responsibility—to lead the way toward a more
                   sustainable food system.
                 </p>
@@ -475,62 +475,57 @@ export default function SustainabilityPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Award className="h-10 w-10 text-primary" />,
-                  title: "Green Restaurant Certification",
-                  description:
-                    "We've earned a 3-Star Certification from the Green Restaurant Association for our comprehensive sustainability practices across water, waste, energy, and food sourcing.",
-                  year: "Certified since 2021",
-                },
-                {
-                  icon: <Leaf className="h-10 w-10 text-primary" />,
-                  title: "Zero Waste Certification",
-                  description:
-                    "We've achieved Gold Level Zero Waste Certification by diverting over 95% of our waste from landfills through reduction, reuse, recycling, and composting strategies.",
-                  year: "Certified since 2022",
-                },
-                {
-                  icon: <Globe className="h-10 w-10 text-primary" />,
-                  title: "Climate Neutral Certified",
-                  description:
-                    "We measure, reduce, and offset our entire carbon footprint annually, making our operations completely carbon neutral from farm to table.",
-                  year: "Certified since 2023",
-                },
-                {
-                  icon: <Users className="h-10 w-10 text-primary" />,
-                  title: "1% for the Planet Member",
-                  description:
-                    "We donate 1% of our annual sales to environmental nonprofits focused on sustainable food systems and climate action.",
-                  year: "Member since 2021",
-                },
-                {
-                  icon: <Droplets className="h-10 w-10 text-primary" />,
-                  title: "Water Restoration Certified",
-                  description:
-                    "We balance 100% of our water footprint by supporting verified water restoration projects in water-stressed regions.",
-                  year: "Certified since 2022",
-                },
-                {
-                  icon: <Heart className="h-10 w-10 text-primary" />,
-                  title: "B Corp Certification",
-                  description:
-                    "We meet the highest standards of verified social and environmental performance, transparency, and accountability.",
-                  year: "Certification in progress",
-                },
-              ].map((certification, index) => (
-                <Card key={index} className="border-primary/10 hover:border-primary/30 transition-colors">
-                  <CardHeader>
-                    <div className="mb-2">{certification.icon}</div>
-                    <CardTitle>{certification.title}</CardTitle>
-                    <CardDescription>{certification.year}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{certification.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+              <div className="flex flex-col items-center text-center">
+                <div className="relative h-64 w-full mb-6">
+                  <Image 
+                    src="/ceritifcations/greencertification.png"
+                    alt="Green Restaurant Certification"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Green Restaurant Certification</h3>
+                <p className="text-muted-foreground">
+                  We've earned a 3-Star Certification from the Green Restaurant Association for our comprehensive 
+                  sustainability practices across water, waste, energy, and food sourcing.
+                </p>
+                <p className="text-sm font-medium text-primary mt-4">Certified since 2021</p>
+              </div>
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="relative h-64 w-full mb-6">
+                  <Image 
+                    src="/ceritifcations/climateneutral.jpg"
+                    alt="Climate Neutral Certified"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Climate Neutral Certified</h3>
+                <p className="text-muted-foreground">
+                  We measure, reduce, and offset our entire carbon footprint annually, making our operations 
+                  completely carbon neutral from farm to table.
+                </p>
+                <p className="text-sm font-medium text-primary mt-4">Certified since 2023</p>
+              </div>
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="relative h-64 w-full mb-6">
+                  <Image 
+                    src="/ceritifcations/fortheplanet.jpg"
+                    alt="1% for the Planet Member"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-2">1% for the Planet Member</h3>
+                <p className="text-muted-foreground">
+                  We donate 1% of our annual sales to environmental nonprofits focused on sustainable 
+                  food systems and climate action.
+                </p>
+                <p className="text-sm font-medium text-primary mt-4">Member since 2021</p>
+              </div>
             </div>
           </div>
         </section>
@@ -862,11 +857,10 @@ export default function SustainabilityPage() {
             </div>
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p>© {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
+            <p> 2024 GreenPlate. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
   )
 }
-
