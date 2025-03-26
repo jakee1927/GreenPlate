@@ -106,57 +106,6 @@ export default function SustainabilityPage() {
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
         </section>
 
-        {/* Our Vision Section */}
-        <section className="py-16 md:py-24">
-          <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                  Our Vision for a Sustainable Future
-                </h2>
-                <p className="text-muted-foreground mb-6">
-                  We believe that restaurants have a unique opportunity—and responsibility—to lead the way toward a more
-                  sustainable food system.
-                </p>
-                <p className="text-muted-foreground mb-6">
-                  Our vision is to create a dining experience that not only delights your taste buds but also respects
-                  and regenerates our planet. We're committed to making choices that reduce our environmental footprint
-                  while supporting local ecosystems and communities.
-                </p>
-                <p className="text-muted-foreground">
-                  Through thoughtful sourcing, careful waste management, and efficient resource use, we're working to
-                  prove that sustainability and exceptional dining can go hand in hand. Our goal is not just to be less
-                  harmful, but to be actively beneficial to our environment.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  {[
-                    { icon: <Globe className="h-5 w-5" />, text: "Planet-First Decisions" },
-                    { icon: <Users className="h-5 w-5" />, text: "Community Impact" },
-                    { icon: <Sparkles className="h-5 w-5" />, text: "Continuous Innovation" },
-                    { icon: <TreePine className="h-5 w-5" />, text: "Regenerative Practices" },
-                  ].map((value, index) => (
-                    <div
-                      key={index}
-                      className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
-                    >
-                      {value.icon}
-                      {value.text}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative aspect-square lg:aspect-auto">
-                <Image
-                  src="/placeholder.svg?height=800&width=800"
-                  alt="Sustainable farming practices"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Key Initiatives Section */}
         <section className="py-16 md:py-24 bg-muted/20">
           <div className="container">
@@ -240,7 +189,7 @@ export default function SustainabilityPage() {
                   </div>
                   <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px]">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/scrapstew.jpg"
                       alt="Chef using vegetable scraps to make stock"
                       fill
                       className="object-cover rounded-lg"
@@ -311,7 +260,7 @@ export default function SustainabilityPage() {
                   </div>
                   <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px]">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/savingwater.jpg"
                       alt="Water-saving fixtures in the restaurant"
                       fill
                       className="object-cover rounded-lg"
@@ -382,7 +331,7 @@ export default function SustainabilityPage() {
                   </div>
                   <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px]">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/solarpannels.jpg"
                       alt="Solar panels on the restaurant roof"
                       fill
                       className="object-cover rounded-lg"
@@ -453,7 +402,7 @@ export default function SustainabilityPage() {
                   </div>
                   <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px]">
                     <Image
-                      src="/placeholder.svg?height=800&width=600"
+                      src="/ecopackage.jpg"
                       alt="Eco-friendly takeaway packaging"
                       fill
                       className="object-cover rounded-lg"
