@@ -39,7 +39,7 @@ export default function ContactPage() {
           </nav>
           <div className="flex items-center gap-4">
             <Button asChild className="hidden md:flex">
-              <Link href="#">Reserve a Table</Link>
+              <Link href="/contact">Reserve a Table</Link>
             </Button>
             <Button variant="outline" size="icon" className="md:hidden">
               <span className="sr-only">Toggle menu</span>
@@ -658,7 +658,7 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
-                  <Link href="#">Reserve a Table</Link>
+                  <Link href="/contact">Reserve a Table</Link>
                 </Button>
                 <Button
                   size="lg"

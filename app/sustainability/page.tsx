@@ -729,7 +729,7 @@ export default function SustainabilityPage() {
                   className="bg-background/20 hover:bg-background/30 text-white"
                   asChild
                 >
-                  <Link href="#">Reserve a Table</Link>
+                  <Link href="/contact">Reserve a Table</Link>
                 </Button>
               </div>
             </div>

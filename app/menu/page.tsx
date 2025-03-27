@@ -317,7 +317,7 @@ export default function MenuPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
-                  <Link href="https://www.opentable.com/" target="_blank" rel="noopener noreferrer">
+                  <Link href="/contact" target="_blank" rel="noopener noreferrer">
                     Reserve a Table
                   </Link>
                 </Button>

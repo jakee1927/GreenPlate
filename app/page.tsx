@@ -63,12 +63,12 @@ export default function Home() {
         <section className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/hero8.jpg"
+              src="/hero10.jpg"
               alt="Fresh vegetables on a wooden table"
               fill
               className="object-cover brightness-[0.7]"
               priority
-              style={{ objectPosition: '80% 30%' }}
+              style={{ objectPosition: '0% 90%' }}
             />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
           </div>
@@ -345,7 +345,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
-                  <Link href="https://www.opentable.com/" target="_blank" rel="noopener noreferrer">
+                  <Link href="/contact" target="_blank" rel="noopener noreferrer">
                     Reserve a Table
                   </Link>
                 </Button>
