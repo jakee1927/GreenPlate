@@ -794,7 +794,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
+            <p>&copy; 2025 GreenPlate. All rights reserved.</p>
           </div>
         </div>
       </footer>
