@@ -63,11 +63,12 @@ export default function Home() {
         <section className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/hero-image.jpg"
+              src="/hero7high.png"
               alt="Fresh vegetables on a wooden table"
               fill
               className="object-cover brightness-[0.7]"
               priority
+              style={{ objectPosition: '0 70%' }}
             />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
           </div>

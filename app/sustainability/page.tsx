@@ -83,6 +83,7 @@ export default function SustainabilityPage() {
               fill
               className="object-cover brightness-[0.6]"
               priority
+              style={{ objectPosition: '0 15%' }}
             />
           </div>
           <div className="container relative z-10 py-16 md:py-24">
@@ -492,7 +493,7 @@ export default function SustainabilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px]">
                 <Image
-                  src="/placeholder.svg?height=800&width=800"
+                  src="/communityproject.jpg"
                   alt="Community garden project"
                   fill
                   className="object-cover rounded-lg"
@@ -657,8 +658,8 @@ export default function SustainabilityPage() {
                     Each year, we publish a comprehensive sustainability report that details our environmental impact,
                     initiatives, progress toward goals, and areas for improvement.
                   </p>
-                  <Button variant="outline" className="w-full sm:w-auto">
-                    Download 2024 Report
+                  <Button variant="outline" className="w-full sm:w-auto" asChild>
+                    <a href="/GreenPlate_Sustainability_Report.pdf" download>Download 2024 Report</a>
                   </Button>
                 </div>
 
@@ -703,7 +704,7 @@ export default function SustainabilityPage() {
         <section className="relative py-16 md:py-24">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=600&width=1920"
+              src="/promo-dusk.jpg"
               alt="Sustainable dining experience"
               fill
               className="object-cover brightness-[0.4]"
@@ -711,7 +712,9 @@ export default function SustainabilityPage() {
           </div>
           <div className="container relative z-10">
             <div className="max-w-2xl mx-auto text-center text-white">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Join Us in Making a Difference</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                Join Us in Making a Difference
+              </h2>
               <p className="text-lg mb-8">
                 Every meal at GreenPlate is a step toward a more sustainable food system. Experience delicious cuisine
                 that's good for you and the planet.
