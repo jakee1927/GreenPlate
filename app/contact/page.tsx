@@ -21,6 +21,9 @@ export default function ContactPage() {
             <span className="text-xl font-bold">GreenPlate</span>
           </Link>
           <nav className="hidden md:flex gap-6">
+          <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+              About Us
+            </Link>
             <Link href="/menu" className="text-sm font-medium hover:text-primary transition-colors">
               Menu
             </Link>
@@ -29,9 +32,6 @@ export default function ContactPage() {
             </Link>
             <Link href="/sustainability" className="text-sm font-medium hover:text-primary transition-colors">
               Sustainability
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
-              About Us
             </Link>
             <Link href="/contact" className="text-sm font-medium text-primary transition-colors">
               Contact
@@ -68,11 +68,12 @@ export default function ContactPage() {
         <section className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=400&width=1920"
+              src="/interiorcontactus.jpg"
               alt="Restaurant interior with natural lighting"
               fill
               className="object-cover brightness-[0.6]"
               priority
+              style={{ objectPosition: '0 30%' }}
             />
           </div>
           <div className="container relative z-10 py-16 md:py-24">
@@ -490,12 +491,12 @@ export default function ContactPage() {
                           <h4 className="font-medium">Directions</h4>
                           <div className="space-y-2 mt-2">
                             <Button variant="outline" className="w-full">
-                              <Link href="#" className="flex items-center gap-2 w-full justify-center">
+                              <Link href="https://www.google.com/maps" className="flex items-center gap-2 w-full justify-center">
                                 Get Directions on Google Maps
                               </Link>
                             </Button>
                             <Button variant="outline" className="w-full">
-                              <Link href="#" className="flex items-center gap-2 w-full justify-center">
+                              <Link href="https://www.apple.com/maps/" className="flex items-center gap-2 w-full justify-center">
                                 Get Directions on Apple Maps
                               </Link>
                             </Button>
@@ -561,19 +562,17 @@ export default function ContactPage() {
 
                   <div className="space-y-8">
                     <div className="rounded-lg overflow-hidden border h-[400px] relative">
-                      {/* This would be replaced with an actual map component in a real implementation */}
-                      <Image
-                        src="/placeholder.svg?height=400&width=600"
-                        alt="Map location of GreenPlate restaurant"
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                        <div className="bg-white p-4 rounded-lg shadow-lg">
-                          <p className="font-medium text-center">Interactive Map</p>
-                          <p className="text-sm text-muted-foreground">Would display here in production</p>
-                        </div>
-                      </div>
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0634992711397!2d-122.41941492392031!3d37.77492971975435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjgiTiAxMjLCsDI1JzA1LjAiVw!5e0!3m2!1sen!2sus!4v1616603835743!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="GreenPlate Restaurant Location"
+                        aria-label="Google Maps showing location of GreenPlate restaurant at 123 Nature Way, Greenville, CA 90210"
+                      ></iframe>
                     </div>
 
                     <div className="bg-primary/5 rounded-lg p-6 space-y-4">
@@ -644,7 +643,7 @@ export default function ContactPage() {
         <section className="relative py-16 md:py-24">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=600&width=1920"
+              src="promo-dusk.jpg"
               alt="Restaurant dining area with natural lighting"
               fill
               className="object-cover brightness-[0.4]"
@@ -795,11 +794,10 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p>© {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
   )
 }
-

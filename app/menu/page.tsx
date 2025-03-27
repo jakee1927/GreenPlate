@@ -29,13 +29,13 @@ export default function MenuPage() {
             <Link href="/sustainability" className="text-sm font-medium hover:text-primary transition-colors">
               Sustainability
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
               Contact
             </Link>
           </nav>
           <div className="flex items-center gap-4">
             <Button asChild className="hidden md:flex">
-              <Link href="https://www.opentable.com/" target="_blank" rel="noopener noreferrer">
+              <Link href="/contact">
                 Reserve a Table
               </Link>
             </Button>

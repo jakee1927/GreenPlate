@@ -26,13 +26,13 @@ export default function Home() {
             <Link href="/sustainability" className="text-sm font-medium hover:text-primary transition-colors">
               Sustainability
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
               Contact
             </Link>
           </nav>
           <div className="flex items-center gap-4">
             <Button asChild className="hidden md:flex">
-              <Link href="https://www.opentable.com/" target="_blank" rel="noopener noreferrer">
+              <Link href="/contact">
                 Reserve a Table
               </Link>
             </Button>
@@ -63,12 +63,12 @@ export default function Home() {
         <section className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/hero7high.png"
+              src="/hero8.jpg"
               alt="Fresh vegetables on a wooden table"
               fill
               className="object-cover brightness-[0.7]"
               priority
-              style={{ objectPosition: '0 70%' }}
+              style={{ objectPosition: '80% 30%' }}
             />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
           </div>

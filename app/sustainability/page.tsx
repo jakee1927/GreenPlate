@@ -43,13 +43,13 @@ export default function SustainabilityPage() {
             <Link href="/sustainability" className="text-sm font-medium text-primary transition-colors">
               Sustainability
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
               Contact
             </Link>
           </nav>
           <div className="flex items-center gap-4">
             <Button asChild className="hidden md:flex">
-              <Link href="#">Reserve a Table</Link>
+              <Link href="/contact">Reserve a Table</Link>
             </Button>
             <Button variant="outline" size="icon" className="md:hidden">
               <span className="sr-only">Toggle menu</span>
@@ -767,8 +767,8 @@ export default function SustainabilityPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    About Us
+                  <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                    Contact
                   </Link>
                 </li>
               </ul>
