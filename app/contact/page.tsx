@@ -10,6 +10,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Separator } from "@/components/ui/separator"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { NewsletterSubscription } from "@/components/newsletter-subscription"
+import { ContactNewsletter } from "@/components/contact-newsletter"
 
 export default function ContactPage() {
   return (
@@ -620,7 +622,7 @@ export default function ContactPage() {
         </section>
 
         {/* Newsletter Section */}
-        <section className="py-16 md:py-24 bg-muted/20">
+        <section className="py-12 md:py-16 bg-muted/20">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Stay Connected</h2>
@@ -628,13 +630,7 @@ export default function ContactPage() {
                 Subscribe to our newsletter to receive updates on seasonal menus, special events, and sustainability
                 initiatives.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mt-6">
-                <Input placeholder="Your email address" type="email" className="flex-1" />
-                <Button type="submit">Subscribe</Button>
-              </div>
-              <p className="text-sm text-muted-foreground mt-4">
-                We respect your privacy and will never share your information.
-              </p>
+              <ContactNewsletter />
             </div>
           </div>
         </section>

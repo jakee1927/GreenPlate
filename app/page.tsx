@@ -3,6 +3,7 @@ import Image from "next/image"
 import { ArrowRight, Leaf, Utensils, Droplets, Sun } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { NewsletterSubscription } from "@/components/newsletter-subscription"
 
 export default function Home() {
   return (
@@ -113,6 +114,7 @@ export default function Home() {
                   title: "Harvest Bowl",
                   description: "Seasonal roasted vegetables, quinoa, avocado, and our house-made tahini dressing.",
                   image: "/harvest-bowl.jpg",
+                  style: { objectPosition: '0% 90%' },
                 },
                 {
                   title: "Garden Risotto",
@@ -202,8 +204,8 @@ export default function Home() {
                 </div>
                 <div className="mt-8">
                   <Button variant="outline" asChild>
-                    <Link href="#" className="flex items-center gap-2">
-                      Meet Our Farmers <ArrowRight className="h-4 w-4" />
+                    <Link href="/approach" className="flex items-center gap-2">
+                      Learn More <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
@@ -265,7 +267,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center mt-12">
               <Button asChild>
-                <Link href="#" className="flex items-center gap-2">
+                <Link href="/sustainability" className="flex items-center gap-2">
                   Learn More About Our Practices <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -345,7 +347,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
-                  <Link href="/contact" target="_blank" rel="noopener noreferrer">
+                  <Link href="/contact">
                     Reserve a Table
                   </Link>
                 </Button>
@@ -421,20 +423,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">Stay Updated</h3>
-              <p className="text-muted-foreground mb-4">
-                Subscribe to our newsletter for seasonal menu updates and events.
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                />
-                <Button type="submit">Subscribe</Button>
-              </div>
-            </div>
+            <NewsletterSubscription />
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} GreenPlate. All rights reserved.</p>

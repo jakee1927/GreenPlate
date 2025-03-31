@@ -5,6 +5,7 @@ import { ArrowLeft, Leaf, Utensils, Clock, Sun, Droplets, Users, Heart, Award, S
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { NewsletterSubscription } from "@/components/newsletter-subscription"
 
 export default function ApproachPage() {
   return (
@@ -606,20 +607,7 @@ export default function ApproachPage() {
                 </p>
               </div>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">Stay Updated</h3>
-              <p className="text-muted-foreground mb-4">
-                Subscribe to our newsletter for seasonal menu updates and events.
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                />
-                <Button type="submit">Subscribe</Button>
-              </div>
-            </div>
+            <NewsletterSubscription />
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
             <p> {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
