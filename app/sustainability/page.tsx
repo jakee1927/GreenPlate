@@ -21,6 +21,7 @@ import { Progress } from "@/components/ui/progress"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { NewsletterSubscription } from "@/components/newsletter-subscription"
+import { MobileMenu } from "@/components/mobile-menu"
 
 export default function SustainabilityPage() {
   return (
@@ -52,25 +53,7 @@ export default function SustainabilityPage() {
             <Button asChild className="hidden md:flex">
               <Link href="/contact">Reserve a Table</Link>
             </Button>
-            <Button variant="outline" size="icon" className="md:hidden">
-              <span className="sr-only">Toggle menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </Button>
+            <MobileMenu />
           </div>
         </div>
       </header>
@@ -679,7 +662,9 @@ export default function SustainabilityPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="h-6 w-6 flex-shrink-0 flex items-center justify-center">•</div>
-                      <p>Balancing the higher costs of some sustainable practices with keeping our menu accessible</p>
+                      <p>
+                        Balancing the higher costs of some sustainable practices with keeping our menu accessible
+                      </p>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="h-6 w-6 flex-shrink-0 flex items-center justify-center">•</div>
