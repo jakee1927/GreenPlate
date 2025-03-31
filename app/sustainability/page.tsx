@@ -679,7 +679,9 @@ export default function SustainabilityPage() {
                     We welcome feedback and ideas from our community. If you have suggestions for how we can improve our
                     sustainability practices, please share them with us.
                   </p>
-                  <Button className="w-full sm:w-auto">Share Your Ideas</Button>
+                  <Button className="w-full sm:w-auto" asChild>
+                    <a href="/contact">Share Your Ideas</a>
+                  </Button>
                 </div>
               </div>
             </div>
