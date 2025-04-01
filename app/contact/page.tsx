@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, ChangeEvent, FormEvent } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Leaf, Phone, Mail, Clock, MapPin, Calendar, MessageSquare, Users, ExternalLink } from "lucide-react"
@@ -15,6 +18,104 @@ import { ContactNewsletter } from "@/components/contact-newsletter"
 import { MobileMenu } from "@/components/mobile-menu"
 
 export default function ContactPage() {
+  // Reservation form state
+  const [reservationData, setReservationData] = useState({
+    date: "",
+    time: "",
+    guests: "",
+    name: "",
+    phone: "",
+    email: "",
+    specialRequests: ""
+  });
+  const [reservationButtonText, setReservationButtonText] = useState("Request Reservation");
+
+  // Contact form state
+  const [contactData, setContactData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [contactButtonText, setContactButtonText] = useState("Send Message");
+
+  // Handle reservation form input changes
+  const handleReservationChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setReservationData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  // Handle select changes for reservation form
+  const handleReservationSelectChange = (value: string, field: string) => {
+    setReservationData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  // Handle contact form input changes
+  const handleContactChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setContactData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  // Handle contact form select change
+  const handleContactSelectChange = (value: string) => {
+    setContactData(prev => ({
+      ...prev,
+      subject: value
+    }));
+  };
+
+  // Handle reservation form submission
+  const handleReservationSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Clear form fields
+    setReservationData({
+      date: "",
+      time: "",
+      guests: "",
+      name: "",
+      phone: "",
+      email: "",
+      specialRequests: ""
+    });
+    
+    // Change button text
+    setReservationButtonText("Reservation Sent!");
+    
+    // Reset button text after 2.5 seconds
+    setTimeout(() => {
+      setReservationButtonText("Request Reservation");
+    }, 2500);
+  };
+
+  // Handle contact form submission
+  const handleContactSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Clear form fields
+    setContactData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
+    
+    // Change button text
+    setContactButtonText("Message Sent!");
+    
+    // Reset button text after 2.5 seconds
+    setTimeout(() => {
+      setContactButtonText("Send Message");
+    }, 2500);
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -102,19 +203,28 @@ export default function ContactPage() {
                       especially for dinner and weekends.
                     </p>
 
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleReservationSubmit}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
                           <label htmlFor="date" className="text-sm font-medium">
                             Date
                           </label>
-                          <Input type="date" id="date" min={new Date().toISOString().split("T")[0]} />
+                          <Input 
+                            type="date" 
+                            id="date" 
+                            min={new Date().toISOString().split("T")[0]} 
+                            value={reservationData.date}
+                            onChange={handleReservationChange}
+                          />
                         </div>
                         <div className="space-y-2">
                           <label htmlFor="time" className="text-sm font-medium">
                             Time
                           </label>
-                          <Select>
+                          <Select 
+                            value={reservationData.time} 
+                            onValueChange={(value) => handleReservationSelectChange(value, "time")}
+                          >
                             <SelectTrigger>
                               <SelectValue placeholder="Select time" />
                             </SelectTrigger>
@@ -140,7 +250,10 @@ export default function ContactPage() {
                         <label htmlFor="guests" className="text-sm font-medium">
                           Number of Guests
                         </label>
-                        <Select>
+                        <Select 
+                          value={reservationData.guests} 
+                          onValueChange={(value) => handleReservationSelectChange(value, "guests")}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Select number of guests" />
                           </SelectTrigger>
@@ -161,13 +274,24 @@ export default function ContactPage() {
                           <label htmlFor="name" className="text-sm font-medium">
                             Full Name
                           </label>
-                          <Input id="name" placeholder="Your name" />
+                          <Input 
+                            id="name" 
+                            placeholder="Your name" 
+                            value={reservationData.name}
+                            onChange={handleReservationChange}
+                          />
                         </div>
                         <div className="space-y-2">
                           <label htmlFor="phone" className="text-sm font-medium">
                             Phone Number
                           </label>
-                          <Input id="phone" placeholder="Your phone number" type="tel" />
+                          <Input 
+                            id="phone" 
+                            placeholder="Your phone number" 
+                            type="tel" 
+                            value={reservationData.phone}
+                            onChange={handleReservationChange}
+                          />
                         </div>
                       </div>
 
@@ -175,26 +299,34 @@ export default function ContactPage() {
                         <label htmlFor="email" className="text-sm font-medium">
                           Email Address
                         </label>
-                        <Input id="email" placeholder="Your email address" type="email" />
+                        <Input 
+                          id="email" 
+                          placeholder="Your email address" 
+                          type="email" 
+                          value={reservationData.email}
+                          onChange={handleReservationChange}
+                        />
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="special-requests" className="text-sm font-medium">
+                        <label htmlFor="specialRequests" className="text-sm font-medium">
                           Special Requests (Optional)
                         </label>
                         <Textarea
-                          id="special-requests"
+                          id="specialRequests"
                           placeholder="Please let us know about any dietary restrictions, special occasions, or seating preferences"
                           rows={4}
+                          value={reservationData.specialRequests}
+                          onChange={handleReservationChange}
                         />
                       </div>
 
                       <Button type="submit" className="w-full">
-                        Request Reservation
+                        {reservationButtonText}
                       </Button>
 
                       <p className="text-sm text-muted-foreground text-center">
-                        We'll confirm your reservation via email or phone within 24 hours.
+                        We'll confirm your reservation by email within 24 hours.
                       </p>
                     </form>
                   </div>
@@ -268,19 +400,30 @@ export default function ContactPage() {
                       we'll get back to you as soon as possible.
                     </p>
 
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleContactSubmit}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <label htmlFor="contact-name" className="text-sm font-medium">
+                          <label htmlFor="name" className="text-sm font-medium">
                             Full Name
                           </label>
-                          <Input id="contact-name" placeholder="Your name" />
+                          <Input 
+                            id="name" 
+                            placeholder="Your name" 
+                            value={contactData.name}
+                            onChange={handleContactChange}
+                          />
                         </div>
                         <div className="space-y-2">
-                          <label htmlFor="contact-email" className="text-sm font-medium">
+                          <label htmlFor="email" className="text-sm font-medium">
                             Email Address
                           </label>
-                          <Input id="contact-email" placeholder="Your email address" type="email" />
+                          <Input 
+                            id="email" 
+                            placeholder="Your email address" 
+                            type="email" 
+                            value={contactData.email}
+                            onChange={handleContactChange}
+                          />
                         </div>
                       </div>
 
@@ -288,7 +431,10 @@ export default function ContactPage() {
                         <label htmlFor="subject" className="text-sm font-medium">
                           Subject
                         </label>
-                        <Select>
+                        <Select 
+                          value={contactData.subject} 
+                          onValueChange={handleContactSelectChange}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Select a subject" />
                           </SelectTrigger>
@@ -307,11 +453,17 @@ export default function ContactPage() {
                         <label htmlFor="message" className="text-sm font-medium">
                           Message
                         </label>
-                        <Textarea id="message" placeholder="How can we help you?" rows={6} />
+                        <Textarea 
+                          id="message" 
+                          placeholder="How can we help you?" 
+                          rows={6} 
+                          value={contactData.message}
+                          onChange={handleContactChange}
+                        />
                       </div>
 
                       <Button type="submit" className="w-full">
-                        Send Message
+                        {contactButtonText}
                       </Button>
 
                       <p className="text-sm text-muted-foreground text-center">
