@@ -784,7 +784,7 @@ export default function SustainabilityPage() {
             <NewsletterSubscription />
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p> 2024 GreenPlate. All rights reserved.</p>
+            <p> 2024 GreenPlate. All rights reserved. TSA ID #2113002.</p>
           </div>
         </div>
       </footer>

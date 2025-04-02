@@ -409,7 +409,7 @@ export default function Home() {
             <NewsletterSubscription />
           </div>
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} GreenPlate. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} GreenPlate. All rights reserved. TSA ID #2113002.</p>
           </div>
         </div>
       </footer>
